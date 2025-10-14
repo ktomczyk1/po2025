@@ -23,21 +23,27 @@ public class Symulacja_pelnego_trafienia {
         // Teraz komputer losuje liczby....
 
         int losowanie = 0;
-        for (int i=0; i<6; i++)
+        int n;
+
+        kopia.add(0);
+
+        while (typy.containsAll(kopia) == false)
         {
-
-            while  (kopia.size() < 6)
+            losowanie += 1;
+            kopia.clear();
+            for (int i=0;i<6;i++)
             {
-                int n =  rand.nextInt(1,49);
-                if (typy.contains(n) ==  true && kopia.contains(n) == false) {
-                    kopia.add(n);
-                }
+                n = rand.nextInt(1,50);
+                kopia.add(n);
             }
-
         }
+
+
+
         System.out.println(kopia);
         long koniec = System.currentTimeMillis();
-        System.out.println(koniec - start);
+        System.out.println(koniec - start + "ms");
+        System.out.println(losowanie + " prob");
 
     }
 }

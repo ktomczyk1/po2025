@@ -18,6 +18,11 @@ public class Silnik extends Komponent {
 
     }
 
+    public double getObroty() {
+        return obroty;
+    }
+
+
     public void zatrzymaj()
     {
         if (uruchomiony == true)

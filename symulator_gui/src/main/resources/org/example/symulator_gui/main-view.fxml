@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            prefWidth="1200.0" prefHeight="650.0">
+
+    <!-- GÓRNY PASEK -->
+    <top>
+        <HBox spacing="10.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets top="10.0" right="10.0" bottom="10.0" left="10.0"/>
+            </padding>
+            <children>
+                <Label text="Samochód:"/>
+                <ComboBox prefWidth="150.0"/>
+                <Button text="Dodaj nowy"/>
+                <Button text="Usuń"/>
+            </children>
+        </HBox>
+    </top>
+
+    <!-- LEWY PANEL -->
+    <left>
+        <ScrollPane prefWidth="260.0" fitToWidth="true">
+            <content>
+                <VBox spacing="10.0">
+                    <padding>
+                        <Insets top="10.0" right="10.0" bottom="10.0" left="10.0"/>
+                    </padding>
+
+                    <!-- Samochód -->
+                    <children>
+                        <TitledPane text="Samochód" expanded="true">
+                            <content>
+                                <GridPane hgap="5.0" vgap="5.0">
+                                    <children>
+                                        <Label text="Model" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                                        <TextField GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+
+                                        <Label text="Nr rejestracyjny" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                                        <TextField GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+
+                                        <Label text="Waga" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                                        <TextField GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+
+                                        <Label text="Prędkość" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                                        <TextField GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+
+                                        <HBox spacing="5.0" GridPane.rowIndex="8" GridPane.columnIndex="0">
+                                            <children>
+                                                <Button text="Włącz"/>
+                                                <Button text="Wyłącz"/>
+                                                <Button text="Button"/>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </GridPane>
+                            </content>
+                        </TitledPane>
+
+                        <!-- Skrzynia Biegów -->
+                        <TitledPane text="Skrzynia Biegów" expanded="false">
+                            <content>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <Label text="Nazwa"/>
+                                        <TextField/>
+                                        <Label text="Cena"/>
+                                        <TextField/>
+                                        <Label text="Waga"/>
+                                        <TextField/>
+                                        <Label text="Bieg"/>
+                                        <TextField/>
+                                        <HBox spacing="5.0">
+                                            <children>
+                                                <Button text="Zwiększ bieg"/>
+                                                <Button text="Zmniejsz bieg"/>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </content>
+                        </TitledPane>
+
+                        <!-- Silnik -->
+                        <TitledPane text="Silnik" expanded="false">
+                            <content>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <Label text="Nazwa"/>
+                                        <TextField/>
+                                        <Label text="Cena"/>
+                                        <TextField/>
+                                        <Label text="Waga"/>
+                                        <TextField/>
+                                        <Label text="Obroty"/>
+                                        <TextField/>
+                                        <HBox spacing="5.0">
+                                            <children>
+                                                <Button text="Dodaj gazu"/>
+                                                <Button text="Ujmij gazu"/>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </content>
+                        </TitledPane>
+
+                        <!-- Sprzęgło -->
+                        <TitledPane text="Sprzęgło" expanded="false">
+                            <content>
+                                <VBox spacing="5.0">
+                                    <children>
+                                        <Label text="Nazwa"/>
+                                        <TextField/>
+                                        <Label text="Cena"/>
+                                        <TextField/>
+                                        <Label text="Waga"/>
+                                        <TextField/>
+                                        <Label text="Stan"/>
+                                        <TextField/>
+                                        <Button text="Napnij"/>
+                                    </children>
+                                </VBox>
+                            </content>
+                        </TitledPane>
+
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </left>
+
+    <!-- PRAWY PANEL (MAPA) -->
+    <center>
+        <Pane style="-fx-background-color: #99ff99;">
+            <children>
+                <Label text="Mapa" layoutX="20.0" layoutY="20.0"/>
+                <Label text="Car 🚗" layoutX="20.0" layoutY="50.0"/>
+            </children>
+        </Pane>
+    </center>
+
+</BorderPane>

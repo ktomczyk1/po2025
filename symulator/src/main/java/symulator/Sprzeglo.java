@@ -14,4 +14,9 @@ public class Sprzeglo extends Komponent {
         stanSprzegla = false;
         System.out.println("Sprzeglo zwolnione");
     }
+
+    public boolean getStanSprzegla() {
+        return stanSprzegla;
+    }
+
 }
